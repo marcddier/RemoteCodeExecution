@@ -1,0 +1,52 @@
+import { Head, Notes, Appear } from 'mdx-deck'
+
+export { dark as theme } from 'mdx-deck/themes'
+
+
+<Head>
+  <title>RCE</title>
+</Head>
+
+# Remote Code Execution
+
+---
+
+## What does it mean ?  
+Remote code execution is the ability an attacker has to access someone else's computing device and make changes, no matter where the device is geographically located. 
+
+---
+
+## My topics
+<ul>
+  <Appear>
+    <li>How can an attacker use your weakness?</li>
+    <li>What are the consequences?</li>
+    <li>What are the solutions?</li>
+  </Appear>
+</ul>
+---
+
+## How
+It can be made by uploading files, or just with an input which go in a function that evaluate it (node-serialize or just a regexp to check if it's a date).
+---
+
+## Consequences
+An attacker who is able to execute such a flaw is usually able to execute commands with the privileges of the programming language or the web server. On many languages he can issue system commands, write, delete or read files or connect to databases.
+---
+
+## Solutions
+To prevent Remote Code Execution, you should avoid to evaluate the code (like the function eval) and not let the user decide the extensions of files he might upload.
+---
+
+## Examples
+We can find a lot of Remote Code Execution in retrogaming speedrun.
+We have some big breach on old versions of IE.
+
+---
+
+## END
+
+
+https://www.netsparker.com/blog/web-security/remote-code-evaluation-execution/
+
+https://searchwindowsserver.techtarget.com/definition/remote-code-execution-RCE
